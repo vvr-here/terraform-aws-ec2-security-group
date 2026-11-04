@@ -148,4 +148,4 @@ terraform destroy -auto-approve
 ```
 
 ## 📄 License
-This repository is licensed under the MIT 'LICENSE'
+This repository is licensed under the MIT LICENSE
