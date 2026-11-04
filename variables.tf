@@ -1,29 +1,26 @@
 variable "aws_region" {
-  description = "AWS deployment region"
+  description = "AWS region"
   type        = string
-  default     = "ap-southeast-2"
+  default     = "ap-southeast-2"   # Sydney region
 }
 
 variable "ami_id" {
-  description = "Ubuntu 20.04 LTS AMI ID for ap-southeast-2"
+  description = "Ubuntu 20.04 LTS AMI ID"
   type        = string
-  default     = "ami-0dd60a46ecc6eac16"
+  default     = "ami-0dd60a46ecc6eac16" # Pre-configured OS image ID in Sydney
 }
 
 variable "instance_type" {
-  description = "EC2 instance sizing"
-  type        = string
-  default     = "t3.micro"
+  type    = string
+  default = "t3.micro"             # 2 vCPUs, 1 GiB RAM (Free tier eligible)
 }
 
 variable "cidr_ipv4" {
-  description = "Allowed IPv4 CIDR for ingress TLS traffic"
-  type        = string
-  default     = "88.34.23.54/32"
+  type    = string
+  default = "88.34.23.54/32"       # /32 means exactly ONE single IPv4 IP address
 }
 
 variable "cidr_ipv6" {
-  description = "Allowed IPv6 CIDR for ingress port 8080 traffic"
-  type        = string
-  default     = "2600:1f18:429:5c00::/56"
+  type    = string
+  default = "2600:1f18:429:5c00::/56" # IPv6 network range
 }
