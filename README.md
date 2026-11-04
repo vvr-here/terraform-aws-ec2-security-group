@@ -147,15 +147,5 @@ terraform apply -auto-approve
 terraform destroy -auto-approve
 ```
 
----
-
-## 🛠️ Key Fixes Included
-
-* **AWS Provider `~> 5.0`:** Required for `aws_vpc_security_group_*_rule` resources (v3.x fails).
-* **Direct Variable References:** Fixed quotes around variables (`var.cidr_ipv4` instead of `"cidr_ipv4"`).
-* **Security Group Binding:** Added `vpc_security_group_ids` to `aws_instance` so the security group is actually attached.
-
----
-
 ## 📄 License
 This repository is licensed under the MIT License
